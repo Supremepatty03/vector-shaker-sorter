@@ -2,6 +2,7 @@
 #include <vector>
 using namespace std;
 int if_integer(void);
+vector<string> default_data(void);
 template <typename T>
 vector<T> shaker_sort(vector<T> data) {
     bool tmp = true;
@@ -28,3 +29,4 @@ vector<T> shaker_sort(vector<T> data) {
 
 vector <string> number_sort(vector <string> data);
 void show_data(vector<string> data);
+string read_until_space();

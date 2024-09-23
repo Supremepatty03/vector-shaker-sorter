@@ -120,12 +120,19 @@ vector<string> number_sort(vector<string> data) {
     // Ќаходим все числа и запоминаем позицию первого
     for (int i = 0; i < data.size(); i++) {
         try {
-            int tmp = stoi(data[i]);
-            numbers.emplace_back(tmp);
-            if (first_element) {
-                first_index = i;
-                first_element = false;
+            int tmp = stoi(data[i]); 
+            if (to_string(tmp)==data[i])
+            {
+                numbers.emplace_back(tmp);
+                if (first_element) 
+                {
+                    first_index = i;
+                    first_element = false;
+                }
             }
+            else {
+                continue;
+            }    
         }
         catch (...) {
             continue;
